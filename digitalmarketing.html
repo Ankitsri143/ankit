@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" />
+
+    <title>Digital Marketing</title>
+
+    <meta property="og:title" content="How to become a frontend developer" />
+
+    <meta property="og:locale" content="en_US" />
+
+    <link rel="canonical" href="//post" />
+
+    <meta property="og:url" content="//post" />
+
+    <meta name="description" content="" />
+
+    <!-- <link rel="icon" type="image/png" href="/assets/img/favicon.png" /> -->
+
+    <meta name="theme-color" content="#5540af" />
+
+    <meta property="og:site_name" content="" />
+
+    <meta property="og:image" content="//assets/img/social.jpg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <meta name="twitter:site" content="@tailwindmade" />
+
+    <link crossorigin="crossorigin" href="https://fonts.gstatic.com" rel="preconnect" />
+
+    <link as="style"
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Raleway:wght@400;500;600;700&display=swap"
+        rel="preload" />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Raleway:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+
+    <link crossorigin="anonymous" href="/assets/styles/main.min.css" media="screen" rel="stylesheet" />
+
+    <script defer src="https://unpkg.com/@alpine-collective/toolkit@1.0.0/dist/cdn.min.js"></script>
+
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/atom-one-dark.min.css" />
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+
+    <script>
+        hljs.highlightAll();
+    </script>
+
+</head>
+
+
+<body :class="{ 'overflow-hidden max-h-screen': mobileMenu }" class="relative" x-data="{ mobileMenu: false }">
+
+    <div id="main" class="relative">
+        <div x-data="{
+    triggerNavItem(id) {
+        $scroll(id)
+    },
+    triggerMobileNavItem(id) {
+        mobileMenu = false;
+        this.triggerNavItem(id)
+    }
+}">
+            <div class="w-full z-50 top-0 py-3 sm:py-5  bg-primary ">
+                <div class="container flex items-center justify-between">
+                    <div>
+                        <a href="/">
+                            <img src="/assets/img/ankitlogo.png" class="w-24 lg:w-48" alt="logo image" />
+                        </a>
+                    </div>
+                    <div class="hidden lg:block">
+                        <ul class="flex items-center">
+
+                            <li class="group pl-6">
+
+                                <a href="/#about"
+                                    class="cursor-pointe pt-0.5 font-header font-semibold uppercase text-white">About</a>
+
+                                <span class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
+                            </li>
+
+                            <li class="group pl-6">
+
+                                <a href="/#services"
+                                    class="cursor-pointe pt-0.5 font-header font-semibold uppercase text-white">Services</a>
+
+                                <span class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
+                            </li>
+
+                            <li class="group pl-6">
+
+                                <a href="/#blog"
+                                    class="cursor-pointe pt-0.5 font-header font-semibold uppercase text-white">Blog</a>
+
+                                <span class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
+                            </li>
+
+                            <li class="group pl-6">
+
+                                <a href="/#contact"
+                                    class="cursor-pointe pt-0.5 font-header font-semibold uppercase text-white">Contact</a>
+
+                                <span class="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="block lg:hidden">
+                        <button @click="mobileMenu = true">
+                            <i class="bx bx-menu text-4xl text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pointer-events-none fixed inset-0 z-70 min-h-screen bg-black bg-opacity-70 opacity-0 transition-opacity lg:hidden"
+                :class="{ 'opacity-100 pointer-events-auto': mobileMenu }">
+                <div class="absolute right-0 min-h-screen w-2/3 bg-primary py-4 px-8 shadow md:w-1/3">
+                    <button class="absolute top-0 right-0 mt-4 mr-4" @click="mobileMenu = false">
+                        <img src="/assets/img/icon-close.svg" class="h-10 w-auto" alt="" />
+                    </button>
+
+                    <ul class="mt-8 flex flex-col">
+
+                        <li class="py-2">
+
+                            <a href="/#about" class="pt-0.5 font-header font-semibold uppercase text-white">About</a>
+
+                        </li>
+
+                        <li class="py-2">
+
+                            <a href="/#services"
+                                class="pt-0.5 font-header font-semibold uppercase text-white">Services</a>
+
+                        </li>
+
+                        <li class="py-2">
+
+                            <a href="/#blog" class="pt-0.5 font-header font-semibold uppercase text-white">Blog</a>
+
+                        </li>
+
+                        <li class="py-2">
+
+                            <a href="/#contact"
+                                class="pt-0.5 font-header font-semibold uppercase text-white">Contact</a>
+
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+
+            <div>
+                <div class="container py-6 md:py-10">
+                    <div class="mx-auto max-w-4xl">
+                        <div class="">
+                            <h1
+                                class="pt-5 font-body text-3xl font-semibold text-primary sm:text-4xl md:text-5xl xl:text-6xl">
+                                How to Become a Digital Marketing Expert
+                            </h1>
+
+                            <div class="flex items-center pt-5 md:pt-10">
+                                <div>
+                                    <img src="/assets/img/ankitsrivastav.png"
+                                        class="h-20 w-20 rounded-full border-2 border-grey-70 shadow"
+                                        alt="author image" />
+                                </div>
+                                <div class="pl-5">
+                                    <span class="block font-body text-xl font-bold text-grey-10">By Ankit
+                                        Srivastav</span>
+                                    <span class="block pt-1 font-body text-xl font-bold text-grey-30">February 27,
+                                        2022</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="prose max-w-none pt-8">
+                            <h2 id="digital-marketing-overview">What is Digital Marketing?</h2>
+
+                            <p>Digital marketing is the strategic promotion of products and services using online
+                                platforms, digital technologies, and data-driven strategies. It includes search engine
+                                optimization (SEO), social media marketing, content creation, email campaigns, and paid
+                                advertising. The goal is to connect businesses with their target audience, increase
+                                brand visibility, and generate measurable results through modern digital channels.</p>
+
+                            <p>With the rapid growth of the internet and mobile usage, digital marketing has become
+                                essential for businesses of all sizes. It allows brands to reach potential customers
+                                globally, analyze campaign performance in real time, and optimize strategies for better
+                                engagement and conversions. A strong digital presence not only builds credibility but
+                                also creates long-term customer relationships and sustainable growth.</p>
+
+                            <h3 id="core-areas-of-digital-marketing">Core Areas of Digital Marketing</h3>
+
+                            <p>Successful digital marketing requires a combination of creativity, technical knowledge,
+                                and analytical thinking. By leveraging the right tools and platforms, marketers can
+                                create impactful campaigns that drive traffic, leads, and revenue.</p>
+
+                            <ul>
+                                <li>Search Engine Optimization (SEO)</li>
+                                <li>Social Media Marketing (SMM)</li>
+                                <li>Content Marketing & Blogging</li>
+                                <li>Google Ads & Paid Campaigns</li>
+                                <li>Email Marketing & Automation</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="bg-primary">
+                    <div class="container flex flex-col justify-between py-6 sm:flex-row">
+                        <p class="text-center font-body text-white md:text-left">
+                            <!-- © Copyright 2022 -->
+                        </p>
+                        <div class="flex items-center justify-center pt-5 sm:justify-start sm:pt-0">
+                            <a href="https://www.facebook.com/ankit.srivastava.525480?rdid=443kjMuewFjdX0OG&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1DQkSXcswY%2F#"
+                                target="_blank">
+                                <i class="bx bxl-facebook-square text-2xl text-white hover:text-yellow"></i>
+                            </a>
+                            <a href="https://x.com/ankitsri9695" target="_blank" class="pl-4">
+                                <i class="bx bxl-twitter text-2xl text-white hover:text-yellow"></i>
+                            </a>
+                            <a href="t.me/ankitaffi" target="_blank" class="pl-4">
+                                <i class="bx bxl-telegram text-2xl text-white hover:text-yellow"></i>
+                            </a>
+
+                            <a href="https://www.linkedin.com/in/ankit-srivastava27/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                                target="_blank" class="pl-4">
+                                <i class="bx bxl-linkedin text-2xl text-white hover:text-yellow"></i>
+                            </a>
+                            <a href="https://www.instagram.com/ankkiisri?utm_source=qr&igsh=MXFnbXV0N28xbDJ1Zw%3D%3D"
+                                target="_blank" class="pl-4">
+                                <i class="bx bxl-instagram text-2xl text-white hover:text-yellow"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <script src="/assets/js/main.js"></script>
+
+
+</body>
+
+</html>
